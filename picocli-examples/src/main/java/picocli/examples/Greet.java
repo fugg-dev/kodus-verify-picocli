@@ -26,8 +26,12 @@ public class Greet implements Runnable {
     @Option(names = {"-u", "--user"}, required = true, description = "The user name.")
     String userName;
 
+    @Option(names = {"-g", "--greeting"}, arity = "0..1", defaultValue = "Hello",
+            description = "Optional custom greeting; flag alone falls back to the default.")
+    String greeting;
+
     public void run() {
-        System.out.println("Hello, " + userName);
+        System.out.println(greeting + ", " + userName);
     }
 
     public static void main(String... args) {
