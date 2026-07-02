@@ -23,7 +23,7 @@ import static picocli.CommandLine.Option;
 @Command(name = "Greet", header = "%n@|green Hello world demo|@")
 public class Greet implements Runnable {
 
-    @Option(names = {"-u", "--user"}, required = true, description = "The user name.")
+    @Option(names = {"-u", "--user"}, required = true, description = "The name of the user to greet.")
     String userName;
 
     @Option(names = {"-g", "--greeting"}, arity = "0..1", defaultValue = "Hello",
